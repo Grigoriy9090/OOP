@@ -18,15 +18,23 @@ public class Animal {
     private void wakeUp(){
         System.out.println(getType() + " проснулся");
     }
-
-    private void wakeUp(String time){
-        System.out.println(getType() + " проснулся в " + time);
+    
+    private void toGo(){
+        System.out.println(getType() + " двигается");
     }
 
     private void hunt(){
         System.out.println(getType() + " охотится");
     }
-
+    
+    public void fly(){
+        System.out.println(getType() + " летает");
+    }
+    
+    public void swim(){
+        System.out.println(getType() + " плавает");
+    }
+    
     private void eat(){
         System.out.println(getType() + " кушает");
     }
@@ -40,6 +48,10 @@ public class Animal {
         hunt();
         eat();
         slip();
+        toGo();
+        fly();
+        swim();
+
     }
 
     public void setIllness(Illness illness){
@@ -66,4 +78,5 @@ public class Animal {
     public String toString() {
         return String.format("name =%s, birthday =%s, illness =%s", name, birthDay, illness);
     }
+
 }
